@@ -2,8 +2,8 @@
 # Author yop
 
 # Check UID & $HOME
-[ $(id -u) -ne 0 ] && echo "error: you cannot perform this operation unless you are root."
-[ "$HOME" == "/root" ] && echo "warning: you are installing the environment for root user, please run sudo -E bash autoArch.sh or comment line 2"
+[ $(id -u) -ne 0 ] && echo "error: you cannot perform this operation unless you are root." && exit
+[ "$HOME" == "/root" ] && echo "warning: you are installing the environment for root user, please run sudo -E bash autoArch.sh or comment line 2" && exit
 
 # Install
 pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox zsh man
