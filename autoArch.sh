@@ -10,5 +10,6 @@ pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox ma
 git clone "$MYREPO!!!!!!" 
 mv dotfiles/.* ~/       // .bashrc .xinitrc .config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
 
+/etc/bash.bashrc
 
 # sudo pacman -S virtualbox-guest-utils && sudo systemctl enable vboxservice && reboot
