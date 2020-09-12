@@ -6,7 +6,7 @@
 [ "$HOME" == "/root" ] && echo "warning: you are installing the environment for root user, please run sudo -E bash autoArch.sh or comment line 2"
 
 # Install
-pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git
+pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox man
 git clone "$MYREPO!!!!!!" 
 mv dotfiles/.* ~/       // .bashrc .xinitrc .config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
 
