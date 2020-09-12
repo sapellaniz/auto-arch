@@ -6,10 +6,11 @@
 [ "$HOME" == "/root" ] && echo "warning: you are installing the environment for root user, please run sudo -E bash autoArch.sh or comment line 2"
 
 # Install
-pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox man
+pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox zsh man
 git clone "$MYREPO!!!!!!" 
+usermod -s $(which zsh) $(whoami)
 mv dotfiles/.* ~/       // .bashrc .xinitrc .config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
 
-/etc/bash.bashrc
+
 
 # sudo pacman -S virtualbox-guest-utils && sudo systemctl enable vboxservice && reboot
