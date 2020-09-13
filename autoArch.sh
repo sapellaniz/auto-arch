@@ -1,16 +1,16 @@
 # This script noseke nosekuan
 # Author yop
 
-# Check UID & $HOME
-[ $(id -u) -ne 0 ] && echo "error: you cannot perform this operation unless you are root." && exit
-[ "$HOME" == "/root" ] && echo "warning: you are installing the environment for root user, please run sudo -E bash autoArch.sh or comment line 2" && exit
+# Check UID
+[ "$(id -u)" -eq 0 ] && echo "warning: you are installing the environment for root user, if you really want it just comment line X." && exit
 
 # Install
-pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator rofi git firefox zsh man
-git clone "$MYREPO!!!!!!" 
+sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi firefox zsh man
+yay -S zsh-syntax-highlighting-git // NO CONFIRM?
 usermod -s $(which zsh) $(whoami)
-mv dotfiles/.* ~/       // .bashrc .xinitrc .config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
+m
+su cp dotfiles/.* ~/       // .zshrc .xinitrc .config/bspwm/bspwmrc .config/sxhkd/sxhkdrc 
 
 
-
+rm ~/.bash*
 # sudo pacman -S virtualbox-guest-utils && sudo systemctl enable vboxservice && reboot
