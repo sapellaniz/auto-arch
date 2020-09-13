@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	terminator
+	st -f "Hack Nerd Font Mono:size=11" tmux
 
 # program launcher
 super + d
