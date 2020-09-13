@@ -27,6 +27,7 @@ bindkey '^[[3~' delete-char
 
 # Load aliases and shortcuts.
 alias cp='cp -vi'
+alias mv='mv -vi'
 alias rm='rm -v'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
