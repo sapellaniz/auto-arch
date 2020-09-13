@@ -9,7 +9,7 @@ fi
 
 # Install
 sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi firefox zsh man
-yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git // NO CONFIRM?
+yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git ttf-nerd-fonts-hack-complete-git // NO CONFIRM?
 usermod -s $(which zsh) $(whoami)
 
 su cp dotfiles/.* ~/       // .zshrc .xinitrc 
