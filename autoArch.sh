@@ -36,4 +36,7 @@ rm ~/.bash*
 
 # Remove orphans
 sudo pacman -Rs $(pacman -Qqtd) --noconfirm 
-# sudo pacman -S virtualbox-guest-utils && sudo systemctl enable vboxservice && reboot
+
+# Auto clean
+rm -fr ../.git
+rm -fr $PWD
