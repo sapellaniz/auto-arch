@@ -16,7 +16,10 @@ yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git tt
 sudo usermod -s $(which zsh) $(whoami)
 
 cp dotfiles/.* ~/       
-
+chmod u+x ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/bin/ethernet_status.sh
+chmod +x ~/.config/bin/rofi-power.sh
 #.zshrc
 #.xinitrc
 #.config/wall.png
