@@ -1,8 +1,3 @@
-# Initialize X session
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx
-fi
-
 # Enable colors and change prompt
 autoload -U colors && colors
 PS1='%B%F{red}[%f%(?.%F{green}.%F{red})%?%f%F{red}][%f%F{yellow}%n%f%F{green}@%f%F{blue}%m%f %F{magenta}%~%f%F{red}]%f$%b'
@@ -19,7 +14,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files
 
-
 # key bindings
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
@@ -34,5 +28,3 @@ alias grep='grep --color=auto'
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-
