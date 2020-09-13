@@ -8,7 +8,7 @@ if ! $(which yay &>/dev/null) ; then
 fi
 
 # Install
-sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi firefox zsh man
+sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi firefox zsh man alsa-utils pulseaudio
 yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git ttf-nerd-fonts-hack-complete-git // NO CONFIRM?
 usermod -s $(which zsh) $(whoami)
 
