@@ -35,7 +35,7 @@ bspc rule -a St:$dropdownname state=floating
 
 setxkbmap es
 bspc config external_rules_command "$(which floaters)"
-xwallpaper --stretch ~/.config/wall.png
+xwallpaper --focus ~/.config/wall.png
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 picom --config ~/.config/picom/picom.conf &
