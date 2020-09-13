@@ -2,21 +2,21 @@
 
 Script para automatizar la personalización del entorno de Arch Linux.
 
-- Requisitos:
-    - yay
-- Instalación:
+- **Requisitos:**
+    - [yay](https://aur.archlinux.org/packages/yay/)
+- **Instalación:**
 ```
 git clone https://gitlab.com/sapellaniz/auto-arch.git
 cd auto-arch
 bash autoArch.sh
 ```
-- Incluye:
+- **Incluye:**
     - sxhkd
     - bspwm
     - polybar
     - picom
     - zsh
     - Configura los mejores mirrors y elimina paquetes huérfanos.
-- TODO:
+- **TODO:**
     - tmux
     - WebKit Greeter
