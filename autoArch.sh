@@ -15,7 +15,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd xwallpaper terminator zsh
 yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git ttf-nerd-fonts-hack-complete-git
 sudo usermod -s $(which zsh) $(whoami)
 
-cp dotfiles/.* ~/       
+cp -r dotfiles/.* ~/       
 chmod u+x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/bin/ethernet_status.sh
