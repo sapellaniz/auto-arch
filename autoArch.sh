@@ -11,7 +11,7 @@ fi
 sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install
-sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd xwallpaper terminator zsh man mlocate rofi firefox scrot alsa-utils pulseaudio
+sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd xwallpaper st tmux zsh man mlocate rofi firefox scrot alsa-utils pulseaudio
 yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git ttf-nerd-fonts-hack-complete-git
 sudo usermod -s $(which zsh) $(whoami)
 
