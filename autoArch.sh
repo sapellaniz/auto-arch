@@ -12,8 +12,12 @@ sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi f
 yay -S --noconfirm zsh-syntax-highlighting-git polybar-git picom-ibhagwan-git // NO CONFIRM?
 usermod -s $(which zsh) $(whoami)
 
-su cp dotfiles/.* ~/       // .zshrc .xinitrc .config/bspwm/bspwmrc .config/sxhkd/sxhkdrc .config/picom/picom.conf
-
+su cp dotfiles/.* ~/       // .zshrc .xinitrc 
+                            .config/bspwm/bspwmrc  
+                            .config/sxhkd/sxhkdrc
+                            .config/picom/picom.conf
+                            .config/polybar/config
+                            .config/polybar/launch.sh
 
 rm ~/.bash*
 # sudo pacman -S virtualbox-guest-utils && sudo systemctl enable vboxservice && reboot
