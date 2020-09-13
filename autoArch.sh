@@ -6,7 +6,7 @@
 
 # Install
 sudo pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd terminator mlocate rofi firefox zsh man
-yay -S zsh-syntax-highlighting-git // NO CONFIRM?
+yay -S --noconfirm zsh-syntax-highlighting-git polybar // NO CONFIRM?
 usermod -s $(which zsh) $(whoami)
 m
 su cp dotfiles/.* ~/       // .zshrc .xinitrc .config/bspwm/bspwmrc .config/sxhkd/sxhkdrc 
