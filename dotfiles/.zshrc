@@ -27,4 +27,4 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh-syntax-highlightings/zsh-syntax-highlightings.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
