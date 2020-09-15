@@ -2,6 +2,8 @@
 
 Script para automatizar la personalización del entorno de Arch Linux.
 
+[](screen.png)
+
 - **Requisitos:**
     - [yay](https://aur.archlinux.org/packages/yay/)
 - **Instalación:**
