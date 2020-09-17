@@ -21,9 +21,9 @@ bash autoArch.sh
     - Configura los mejores mirrors y elimina paquetes huérfanos.
 
 **Silent boot:**
+
 Salta el grub, un usuario específio se auto loguea en la tty1 y se redirige la stdout de startx a /dev/null.
 ```
-
 # grub
 /etc/default/grub
         GRUB_TIMEOUT=0
