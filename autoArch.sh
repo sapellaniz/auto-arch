@@ -1,5 +1,5 @@
-# This script noseke nosekuan
-# Author yop
+# Script for build a cool graphical user interface for Arch Linux
+# Author Sergio Apellaniz
 
 # Check UID & yay
 [ "$(id -u)" -eq 0 ] && echo "error: avoid running autoArch.sh as root/sudo." && exit

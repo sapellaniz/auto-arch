@@ -18,6 +18,7 @@ bash autoArch.sh
     - polybar
     - picom
     - zsh
+    - tmux
     - Configura los mejores mirrors y elimina paquetes huérfanos.
 
 **Silent boot:**
