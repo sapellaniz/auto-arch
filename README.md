@@ -2,20 +2,24 @@
 
 Scriptis para automatizar la personalización del entorno de Arch Linux. Dos sabores disponibles, BSPWM y DWM! Probado en máquinas x86 y ARM.
 
-- **BSPWM**
+- **BSPWM:**
+
 ![img](bspwm.png)
 
-- **DWM**
+- **DWM:**
+
 ![img](dwm.png)
 
 - **Instalación:**
-    - bspwm:
+
+1. bspwm:
 ```
 git clone -b bspwm https://github.com/sapellaniz/auto-arch.git
 cd auto-arch
 bash autoArch.sh [ARM]
 ```
-    - dwm:
+
+2. dwm:
 ```
 git clone -b dwm https://gitlab.com/sapellaniz/auto-arch.git
 cd auto-arch
@@ -32,7 +36,7 @@ bash autoArch.sh [ARM]
     - zsh
     - tmux
     - Configura los mejores mirrors y elimina paquetes huérfanos.
-    - + info [aquí](https://github.com/sapellaniz/auto-arch/tree/bspwm)
+    - \+ info [aquí](https://github.com/sapellaniz/auto-arch/tree/bspwm)
 
 2. dwm:
     - dwm
@@ -41,7 +45,7 @@ bash autoArch.sh [ARM]
     - zsh
     - tmux
     - Configura los mejores mirrors y elimina paquetes huérfanos.
-    - + info [aquí](https://github.com/sapellaniz/auto-arch/tree/dwm)
+    - \+ info [aquí](https://github.com/sapellaniz/auto-arch/tree/dwm)
 
 **Silent boot:**
 
