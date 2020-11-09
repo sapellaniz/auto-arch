@@ -24,13 +24,13 @@ bash autoArch.sh [ARM]
 - **Atajos:**
 
 - **Dotfiles:**
-    - ~/.config/
-    - ~/.config/
-    - ~/.config/
-    - ~/.config/
-    - ~/.config/
-    - ~/.config/
-    - ~/.config/
+    - ~/.config/zsh/.zcompdump
+    - ~/.config/zsh/.zprofile
+    - ~/.config/zsh/.zprofile
+    - ~/.config/zsh/.zshrc
+    - ~/.config/tmux/tmux.conf
+    - ~/.config/vim/vimrc
+    - ~/.config/dwm/config.h
     - ~/.config/wall.png
 
 - **Silent boot:**
@@ -66,7 +66,7 @@ Instalar el sistema en un USB 3.0 en vez de en una memoria micro SD, aumenta not
 
 1. Arrancar la rasp desde USB:
 
-    - Seguir el siguiente tutorial hasta el paso 13 (no clonar SD)
+    - Seguir el siguiente tutorial hasta el paso 13 (no clonar SD):
     - https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb
 
 2. Instalar Arch ARM para raspberry en un USB:
