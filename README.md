@@ -1,35 +1,43 @@
 # Auto Arch
 
-Script para automatizar la personalización del entorno de Arch Linux.
+Script para automatizar la personalización del entorno de Arch Linux. Entorno BSPWM! Probado en máquinas x86 y ARM.
 
-![img](screen.png)
+![img](bspwm.png)
 
 - **Requisitos:**
     - [yay](https://aur.archlinux.org/packages/yay/)
+
 - **Instalación:**
 ```
-git clone https://gitlab.com/sapellaniz/auto-arch.git
+git clone -b bspwm https://github.com/sapellaniz/auto-arch.git
 cd auto-arch
 bash autoArch.sh
 ```
 - **Incluye:**
-    - sxhkd
     - bspwm
+    - sxhkd
     - polybar
     - picom
     - zsh
     - tmux
     - Configura los mejores mirrors y elimina paquetes huérfanos.
 
-**Silent boot:**
+- **Atajos:**
 
-Salta el grub, un usuario específio se auto loguea en la tty1 y se redirige la stdout de startx a /dev/null.
+- **Dotfiles:**
+
+- **Silent boot:**
+
+Salta el grub, esconde la salida de systemd, un usuario específio se auto loguea en la tty1 y se redirige la stdout de startx a /dev/null.
 ```
-# grub
+# grub (solo x86)
 /etc/default/grub
         GRUB_TIMEOUT=0
         GRUB_TIMEOUT_STYLE='hidden'
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# systemd (solo ARM)
+# Añadir "quiet" al final de la línea de "/boot/cmdline.txt"
 
 # agetty
 systemctl edit getty@tty1.service
@@ -38,6 +46,7 @@ systemctl edit getty@tty1.service
         ExecStart=-/usr/bin/agetty --skip-login --nonewline --noissue --autologin username --noclear %I $TERM
 
 # startx
-.zprofile
+vim .zprofile
     [ "$(tty)" = "/dev/tty1" ] && ! ps -e | grep -qw Xorg && exec startx &> /dev/null
 ```
+
