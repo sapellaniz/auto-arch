@@ -47,7 +47,7 @@ bash autoArch.sh [ARM]
     - Configura los mejores mirrors y elimina paquetes huérfanos.
     - \+ info [aquí](https://github.com/sapellaniz/auto-arch/tree/dwm)
 
-**Silent boot:**
+- **Silent boot:**
 
 Salta el grub, esconde la salida de systemd, un usuario específio se auto loguea en la tty1 y se redirige la stdout de startx a /dev/null.
 ```
