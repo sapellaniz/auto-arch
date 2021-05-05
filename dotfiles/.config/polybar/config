@@ -1,47 +1,18 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #aa2F343F
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-;foreground = #e1c178
-foreground =  #dd61ca  
+background = #002F343F
+background-alt = #00
+foreground =  #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-;[colors]
-;;orange = #FF6200
-;;orange = #d65d0e
-;darkgray = ${xrdb:color8}
-;orange = ${xrdb:color9}
-;white = #ebdbb2
-;gray = #585858
-;black = #090909
-;red = #c795ae
-;blue = #95aec7
-;yellow = #c7ae95
-;green = #aec795
-#background = #1f222d
-#background = #262626
-;background = #aa2F343F
-;background-alt = #4e4e4e
-#foreground = #dfdfdf
-;;foreground = ${xrdb:foreground}
-;foreground = #ebdbb2
-;foreground-alt = #4e4e4e
-;primary = #1f222d
-;secondary = #FF6200
-;alert = #fb4934
-
 [bar/example]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 37
-;offset-x = 12%
-;offset-y = 1%
 radius = 6.0
 fixed-center = true
 
@@ -56,12 +27,13 @@ border-color = #00000000
 
 padding-left = 0
 padding-right = 2
+override-redirect = true
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=14;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = fixed:pixelsize=16;1
+font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=14;1
 font-3 = Hack Nerd Font Mono:pixelsize=16;2
 
@@ -71,18 +43,6 @@ modules-right = ethernet separator cpu separator memory separator battery separa
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -92,7 +52,6 @@ type = internal/bspwm
 
 label-focused = 
 label-focused-background = ${colors.background-alt}
-#label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = 
@@ -106,35 +65,22 @@ label-empty = 
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
-; Separator in between workspaces
-; label-separator = |
-
 [module/cpu]
 type = internal/cpu
 interval = 2
-#format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #f90000
-#label = %{F#83a598} %{F#dd61ca}%percentage:2%%
-label = %{F#94caf9} %{F#dd61ca}%percentage:2%%
+label = %{F#94caf9} %{F#ffffff}%percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-#format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #4bffdc
-#label =%{F#83a598} %{F#dd61ca}%percentage_used%%
-label =%{F#94caf9}  %{F#dd61ca}%percentage_used%%
+label =%{F#94caf9}  %{F#ffffff}%percentage_used%%
 
 [module/date]
 type = internal/date
-#date-alt =   %A %H:%M
-#date = %{F#83a598}%{F-} %H:%M
 date =%{F#94caf9} %{F-} %H:%M
 interval = 5
-;format-underline = ${colors.white}
-;format-background = ${colors.black}
 format-foreground = ${colors.foreground}
 format-padding = 2
 
@@ -146,23 +92,16 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 format-volume-padding = 2
 
-;format-volume-underline = ${colors.white}
+label-volume = %{F#94caf9} %{F-}%percentage:3%%
 
-label-volume = %{F#83a598} %{F-}%percentage:3%%
-#label-volume-foreground = ${color.white}
-
-label-muted =%{F#928374} %{F-}mute
-#format-muted = <label-muted>
-#format-muted-underline = ${colors.white}
+label-muted =%{F#000000} %{F-}mute
 format-muted-padding = 2
-#label-muted-foreground = ${colors.gray}
 
 format-padding = 2
 
 [module/separator]
 type = custom/text
 content = |
-;content-foreground = #4e4e4e
 content-foreground = #c1c1c1
 
 [module/battery]
@@ -172,58 +111,37 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <label-charging>
-label-charging = %{F#94caf9} %{F#dd61ca}%percentage%%
+label-charging = %{F#94caf9} %{F#ffffff}%percentage%%
 format-discharging = <label-discharging>
-label-discharging = %{F#94caf9} %{F#dd61ca}%percentage%%
-
-
-;format-charging = <animation-charging>  %{F#e1c178}<label-charging>
-;format-charging-underline = #ffb52a
-
-
-;format-discharging = <animation-discharging>  %{F#e1c178}<label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
+label-discharging = %{F#94caf9} %{F#ffffff}%percentage%%
 
 format-full-prefix = "%{F#94caf9} "
-;format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-prefix-foreground =
-;format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = %{F#94caf9}
 ramp-capacity-1 = %{F#94caf9}
 ramp-capacity-2 = %{F#94caf9}
-;ramp-capacity-foreground = ${colors.foreground-alt}
 ramp-capacity-foreground =
 
 animation-charging-0 = %{F#94caf9}
 animation-charging-1 = %{F#94caf9}
 animation-charging-2 = %{F#94caf9}
-;animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-foreground =
 animation-charging-framerate = 750
 
 animation-discharging-0 = %{F#94caf9}
 animation-discharging-1 = %{F#94caf9}
 animation-discharging-2 = %{F#94caf9}
-;animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-foreground =
 animation-discharging-framerate = 750
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 
-; vim:ft=dosini
-;
-;
 [module/ethernet]
 type = custom/script
 interval = 2

@@ -12,7 +12,8 @@ mainmonitor=$(bspc query --monitors --names | sed -n '2p')
 [ -z mainmonitor ] && mainmonitor="$(bspc query --monitors --names | grep -v LVDS | head -n 1)"
 
 if ! echo "$mainmonitor" | grep LVDS >/dev/null 2>&1; then
-	xrandr --output "$mainmonitor" --auto --output LVDS1 --off
+#	xrandr --output "$mainmonitor" --auto --output LVDS1 --off
+	xrandr --output "$mainmonitor" --left-of eDP-1 --output LVDS1 --off
 fi
 
 # Start workspaces on the main monitor.
@@ -22,8 +23,13 @@ bspc monitor $mainmonitor -d 1 2 3 4 5 6 7 8 9 10
 bspc desktop -f 1
 
 bspc config border_width 1
-bspc config window_gap 15
-bspc config top_padding 15	# top_padding I set equal to polybar's height
+bspc config top_padding 45	# top_padding I set equal to polybar's height
+
+bspc config window gap 1 # <----------
+bspc config border_width 1
+bspc config window_gap 1
+bspc config bottom_padding 1
+
 bspc config focus_follows_pointer true
 
 dropdownname="dropdown"
@@ -39,3 +45,6 @@ xwallpaper --focus ~/.config/wall.png
 xsetroot -cursor_name left_ptr &
 ~/.config/polybar/launch.sh &
 picom --config ~/.config/picom/picom.conf &
+
+# Screen brightness
+# sudo vim /sys/class/backlight/intel_backlight/brightness
