@@ -40,7 +40,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # systemd (solo ARM)
 # Añadir "quiet" al final de la línea de "/boot/cmdline.txt"
 
-# agetty
+# agetty (replace <username> with yours)
 systemctl edit getty@tty1.service
         [Service]
         ExecStart=
