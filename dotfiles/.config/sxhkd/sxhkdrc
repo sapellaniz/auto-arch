@@ -4,11 +4,13 @@
 
 # terminal emulator
 super + Return
-	st -f "Hack Nerd Font Mono:size=11" tmux
+	st -f "Nimbus Mono PS:style=Bold:size=12" tmux
+	#st -f "Hack Nerd Font Mono:size=11" tmux
 
 # program launcher
 super + d
-	rofi -show run -font "Hack-Regular-Nerd-Font-Complete 10"
+	rofi -show run -font "Nimbus Mono PS:style=Bold:size=12"
+	#rofi -show run -font "Hack-Regular-Nerd-Font-Complete 10"
 
 # file manager
 super + e
